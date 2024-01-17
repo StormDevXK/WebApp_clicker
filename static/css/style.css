@@ -1,0 +1,32 @@
+body {
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+    margin: 0;
+    user-select: none;
+    color: white;
+    background-color: #343434;
+}
+
+.scoreText {
+    text-align: center;
+    font-size: 50px;
+    padding: 0;
+    margin: 50px 0 20px;
+}
+
+.clickButton {
+    position: absolute;
+    display: flex;
+    width: 200px;
+    height: 200px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: red;
+    border-radius: 100px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
