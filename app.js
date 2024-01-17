@@ -4,6 +4,7 @@ const express = require('express')
 const exphbs = require('express-handlebars')
 const bodyParser = require('body-parser')
 const cnf = require('./config')
+require('./socket')
 
 const app = express()
 app.use(bodyParser.urlencoded({ extended: false }))
