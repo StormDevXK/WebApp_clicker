@@ -1,8 +1,10 @@
 const clickButton = document.querySelector('.clickButton')
 const score = document.querySelector('.scoreText')
 
-const socket = new WebSocket("ws://" + window.location.hostname + ':5051')
-// const socket = new WebSocket('ws://127.0.0.1:5051')
+//const wsAdr = 'ws://' + window.location.hostname + ':5051'
+//console.log(wsAdr)
+//const socket = new WebSocket(wsAdr)
+const socket = new WebSocket('ws://ws.stormdevxk.ru:5051')
 socket.addEventListener('open', () => {
     console.log('Соединение')
 })
