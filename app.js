@@ -3,6 +3,7 @@ const path = require('path')
 const express = require('express')
 const exphbs = require('express-handlebars')
 const bodyParser = require('body-parser')
+const cnf = require('./config')
 
 const app = express()
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -35,6 +36,6 @@ app.use((err, req, res, next) => {
     res.status(500).send('Something broke!')
 })
 
-app.listen(4000, () => (
-    console.log('server start on', 4000, 'port')
+app.listen(cnf.serverConf.port, () => (
+    console.log('server start on', cnf.serverConf.port, 'port')
 ))
