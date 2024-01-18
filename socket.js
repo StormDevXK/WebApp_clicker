@@ -1,7 +1,11 @@
 const WebSocket = require('ws')
+const https = require('https')
+const fs = require('fs')
 
 const server = new WebSocket.Server({
     port: 5051,
+    key: fs.readFileSync(''),
+    cert: fs.readFileSync(''),
 })
 
 let score = 0
