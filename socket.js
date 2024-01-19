@@ -2,11 +2,12 @@ const WebSocket = require('ws')
 const https = require('https')
 const fs = require('fs')
 
-const server = new WebSocket.Server({
-    port: 5051,
-    key: fs.readFileSync(''),
-    cert: fs.readFileSync(''),
+const sserv = https.createServer({
+    key: fs.readFileSync('./.ssl/private.pem'),
+    cert: fs.readFileSync('./.ssl/cert.pem'),
 })
+
+const server = new WebSocketServer({ sserv })
 
 let score = 0
 
@@ -22,3 +23,5 @@ server.on('connection', (ws) => {
         server.clients.forEach(el => el.send(score))
     })
 })
+
+sserv.listen(5051)
